@@ -1,10 +1,123 @@
+/* ------------------------ */
+/* BASIC SET-UP */
+/* ------------------------ */
+
 * {
-  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Raleway', 'Calibri', sans-serif;
+  font-weight: 300;
+  /* Standard font size; all other fonts should be relative via % rather than pixels */
+  font-size: 20px;
+  /* NOTE: review "text-rendering" declaration */
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Used for clearing the floats; ex. the image grid section needs this in order
+for that section to have a height of more than 0px */
+/* .clearfix {zoom:1}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+} */
+
+/* ------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------ */
+
+.row {
+  /* standard width of screens */
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+
+/*-------- HEADINGS ---------*/
+
+h2,
+h3 {
+  /* Reduce font-weight when using bigger font-size */
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
 h1 {
+  /* removes margin coming from normalize.css, but also grants buffer at the bottom */
+  margin: 0 0 20px 50px;
+  color: black;
+  /* example of relative font sizes in use */
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
   font-family: 'Rock Salt', cursive;
 }
+
+/*---------- PARAGRAPHS ----------*/
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  /* 100% - 70% = 30%, divided in two is 15%; by setting margin 15%, <p> will be centered  */
+  margin-left: 15%;
+}
+
+/* ------------------------ */
+/*  LANDING PAGE HEADER */
+/* ------------------------ */
+
+header {
+  /* basically have two background imgs: one is 70% transperency of black,
+  the other is the hero img. The "gradient" simply darkens the hero img
+  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), */
+  /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg); */
+  background-image:  url(img/teal-yellow-ombre.jpg);
+  background-size: cover;
+  background-position: center;
+  /* vh shows full view height of the browser; has image fit to screen */
+  height: 100vh;
+  /* bg-attachment causes that cool effect where image is still while user scrolls */
+  background-attachment: fixed;
+}
+
+/* Main Navi */
+
+.main-nav {
+  float: right;
+  /* "list-style" gets rid of the bullet points for the list */
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  /* "display" arranges <li> elements side-by-side as inline blocks instead of stacked blocks */
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: black;
+  /* "text-decoration" gets rid of the underline for the links */
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+/* .main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}  */
