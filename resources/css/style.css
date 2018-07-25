@@ -1,3 +1,12 @@
+/* Colors */
+/* Dark-Grey (for text ) #424242; */
+/* Teal: #40938d;
+Dark Teal: #25464a;
+Lime: #afca6c;
+Light Grey: #c5c6c1;
+Blue Grey: #7f939c; */
+
+
 /* ------------------------ */
 /* BASIC SET-UP */
 /* ------------------------ */
@@ -11,7 +20,7 @@
 html,
 body {
   background-color: #fff;
-  color: #555;
+  color: #424242;
   font-family: 'Raleway', 'Calibri', sans-serif;
   font-weight: 300;
   /* Standard font size; all other fonts should be relative via % rather than pixels */
@@ -54,13 +63,18 @@ h3 {
 
 h1 {
   /* removes margin coming from normalize.css, but also grants buffer at the bottom */
-  margin: 0 0 20px 50px;
-  color: black;
+  margin: -40px 0 20px 120px;
+  color:#fff;
   /* example of relative font sizes in use */
-  font-size: 240%;
+  font-size: 300%;
+  font-weight: 150;
   word-spacing: 4px;
-  letter-spacing: 1px;
-  font-family: 'Rock Salt', cursive;
+  /* letter-spacing: 1px; */
+  /* font-family: 'Reenie Beanie', cursive; */
+  /* font-family: 'Chathura', sans-serif; */
+  /* font-family: 'Amatic SC', cursive; */
+  font-family: 'Barlow', sans-serif;
+  text-transform: uppercase;
 }
 
 /*---------- PARAGRAPHS ----------*/
@@ -77,11 +91,10 @@ h1 {
 /* ------------------------ */
 
 header {
-  /* basically have two background imgs: one is 70% transperency of black,
+  /* basically have two background imgs: one is a % transperency of black,
   the other is the hero img. The "gradient" simply darkens the hero img
-  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), */
-  /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/hero.jpg); */
-  background-image:  url(img/teal-yellow-ombre.jpg);
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/ink-and-paint.jpg);
   background-size: cover;
   background-position: center;
   /* vh shows full view height of the browser; has image fit to screen */
@@ -108,7 +121,7 @@ header {
 .main-nav li a:link,
 .main-nav li a:visited {
   padding: 8px 0;
-  color: black;
+  color: #fff;
   /* "text-decoration" gets rid of the underline for the links */
   text-decoration: none;
   text-transform: uppercase;
