@@ -179,7 +179,7 @@ header {
   height: 100vh;
   /* bg-attachment causes that cool effect where image is still while user scrolls */
   background-attachment: fixed;
-  /* padding-top: 30px; */
+  padding-top: 30px;
 }
 
 /* Main Navi */
@@ -214,4 +214,12 @@ header {
 .main-nav li a:active {
   color: #424242;
   border-bottom: 2px solid #afca6c;
+}
+
+.medium-photo {
+  width: 35%;
+  height: auto;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  z-index: 9999;
 }
