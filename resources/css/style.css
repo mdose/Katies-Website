@@ -176,7 +176,7 @@ header {
   background-size: cover;
   background-position: center;
   /* vh shows full view height of the browser; has image fit to screen */
-  height: 100vh;
+  height: 650px;
   /* bg-attachment causes that cool effect where image is still while user scrolls */
   background-attachment: fixed;
   padding-top: 30px;
@@ -217,9 +217,18 @@ header {
 }
 
 .medium-photo {
-  width: 35%;
+  width: 135%;
   height: auto;
-  margin-top: 60px;
+  margin-top: 125px;
   margin-bottom: 50px;
+  z-index: 9999;
+}
+
+.right-photo {
+  width: 100%;
+  height: auto;
+  margin: 60px 0 50px 75%;
+  float: right;
+  display: inline-block;
   z-index: 9999;
 }
